@@ -9,7 +9,7 @@
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-    <title>Página inicial E-diaristas</title>
+    <title>Criar Diarista</title>
 </head>
 
 <!--------NavBar--------->
@@ -36,35 +36,15 @@
 
 <body>
     <div class="container">
-        <h1>Lista de diaristas</h1>
-        <table class="table">
-            <thead>
-                <tr>
-                    <th scope="col">#</th>
-                    <th scope="col">Nome</th>
-                    <th scope="col">Telefone</th>
-                    <th scope="col">Ações</th>
-                </tr>
-            </thead>
-            <tbody>
-                @forelse ($diaristas as $diarista)
-                <tr>
-                    <th scope="row">{{ $diarista->id }}</th>
-                    <td>{{ $diarista->nome_completo }}</td>
-                    <td>{{ $diarista->telefone }}</td>
-                    <td></td>
-                </tr>
-                @empty
-                <tr>
-                    <th></th>
-                    <td>Nhenhum registro Cadastrado</td>
-                    <td></td>
-                    <td>@</td>
-                </tr>
-                @endforelse
-            </tbody>
-        </table>
-        <a href="{{ route('diaristas.create') }}" class="btn btn-success">Nova Diarista</a>
+        <h1>Nova diarista</h1>
+        <form>
+            <div class="mb-3">
+                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+            </div>
+
+            <button type="submit" class="btn btn-primary">Salvar</button>
+        </form>
     </div>
 
     <!-- Optional JavaScript; choose one of the two! -->

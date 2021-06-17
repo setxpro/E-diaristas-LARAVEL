@@ -15,4 +15,8 @@ class DiaristaController extends Controller
             'diaristas' => $diaristas
         ]);
     }
+    public function create()
+    {
+        return view('create');
+    }
 }

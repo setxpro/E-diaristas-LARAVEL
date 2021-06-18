@@ -25,6 +25,10 @@ class DiaristaController extends Controller
         $dados = $request->except('_token');
         $dados['foto_usuario'] = $request->foto_usuario->store('public');
 
+        $dados['cpf'] = str_replace(['.', '-'], '', $dados['cpf']);
+        $dados['cep'] = str_replace('-', '', $dados['cep']);
+        $dados['telefone'] = str_replace(['(', ')', ' ', '-'], '', $dados['telefone']);
+
         Diarista::create($dados);
 
         return redirect()->route('diaristas.index');
@@ -48,6 +52,15 @@ class DiaristaController extends Controller
         }
 
         $diarista->update($dados);
+
+        return redirect()->route('diaristas.index');
+    }
+
+    public function destroy(int $id)
+    {
+        $diarista = Diarista::findOrFail($id);
+
+        $diarista->delete();
 
         return redirect()->route('diaristas.index');
     }

@@ -9,6 +9,7 @@
         <tr>
             <th scope="col">#</th>
             <th scope="col">Nome</th>
+            <th scope="col">Email</th>
             <th scope="col">Telefone</th>
             <th scope="col">Ações</th>
         </tr>
@@ -18,10 +19,11 @@
         <tr>
             <th scope="row">{{ $diarista->id }}</th>
             <td>{{ $diarista->nome_completo }}</td>
+            <td>{{ $diarista->email }}</td>
             <td>{{ $diarista->telefone }}</td>
             <td>
                 <a href="{{ route('diaristas.edit', $diarista) }}" class="btn btn-warning">Editar</a>&nbsp;
-                <a href="" class="btn btn-danger">Excluir</a>
+                <a href="{{ route('diaristas.destroy', $diarista) }}" class="btn btn-danger" onclick="return confirm('Deseja realmente excluir?')">Excluir</a>
             </td>
         </tr>
         @empty
@@ -29,7 +31,7 @@
             <th></th>
             <td>Nhenhum registro Cadastrado</td>
             <td></td>
-            <td>@</td>
+            <td></td>
         </tr>
         @endforelse
     </tbody>

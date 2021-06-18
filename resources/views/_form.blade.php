@@ -49,7 +49,7 @@
         </div>
         <div class="mb-3">
             <label for="foto_usuario" class="form-label">Foto</label>
-            <input type="file" class="form-control" id="foto_usuario" name="foto_usuario">
+            <input type="file" class="form-control" id="foto_usuario" name="foto_usuario" required>
         </div>
 
         <button type="submit" class="btn btn-primary">Salvar</button>

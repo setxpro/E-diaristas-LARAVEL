@@ -19,9 +19,10 @@ class CreateDiaristasTable extends Migration
             $table->char('cpf', 11);
             $table->string('email', 100);
             $table->char('telefone', 11);
-            $table->string('logradouro');       
+            $table->string('logradouro');
             $table->string('numero', 20);
             $table->string('bairro', 50);
+            $table->string('cidade', 50);
             $table->string('complemento', 50)->nullable();
             $table->char('cep', 8);
             $table->char('estado', 2);

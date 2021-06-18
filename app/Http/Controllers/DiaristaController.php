@@ -19,4 +19,14 @@ class DiaristaController extends Controller
     {
         return view('create');
     }
+
+    public function store(Request $request)
+    {
+        $dados = $request->except('_token');
+        $dados['foto_usuario'] = $request->foto_usuario->store('public');
+
+        Diarista::create($dados);
+
+        return redirect()->route('diaristas.index');
+    }
 }

@@ -16,6 +16,7 @@ class Diarista extends Model
         'telefone',
         'logradouro',
         'numero',
+        'complemento',
         'bairro',
         'cidade',
         'estado',

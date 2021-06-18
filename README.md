@@ -7,7 +7,7 @@
 <br/>
 <br/>
 
-<p>Lisar Diáristas</p>
+<p>Listar Diaristas</p>
 
 <img src="public/diaristas.jpg" alt="Diaristas" width="100%"/>
 

@@ -1,8 +1,8 @@
-# Cadastro de Diáristas no banco de dados 
+# Cadastro de Diaristas no banco de dados 
 
 <p>
- Formulário de cadastro de diárista com Laravel PHP utilizando o metodo CRUD 
- para Criar, Ler, Editar e Excluir uma diárista no banco de dados... 
+ Formulário de cadastro de diarista com Laravel PHP utilizando o metodo CRUD 
+ para Criar, Ler, Editar e Excluir uma diarista no banco de dados... 
 </p>
 <br/>
 <br/>

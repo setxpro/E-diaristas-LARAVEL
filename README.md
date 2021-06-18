@@ -15,3 +15,20 @@
 
 <img src="public/cadastro.jpg" alt="Cadastro" width="100%"/>
 
+## 🗳 Install
+
+```sh
+laravel new
+```
+
+## 🚀 Usage
+
+```sh
+php artisan serve
+
+```
+## Author
+
+👤 **Patrick Anjos**
+
+* Github: [@setxpro](https://github.com/setxpro)
